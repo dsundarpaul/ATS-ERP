@@ -37,7 +37,6 @@ const VerticalNavItems = (props: Props) => {
 
     return <TagName {...props} key={index} item={item} />
   })
-  console.log(RenderMenuItems)
   
 return <>{RenderMenuItems}</>
 }

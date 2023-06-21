@@ -2,11 +2,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 
 // ** Reducers
-import contacts from './contacts'
+import contacts from './apps/contacts'
+import plans from './apps/plans'
 
 export const store = configureStore({
   reducer: {
-    contacts
+    contacts,
+    plans
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

@@ -6,10 +6,10 @@ import { COLUMNS, DATA } from './consts'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { AppDispatch, RootState } from 'src/store'
-import { fetchData } from 'src/store/contacts'
-import { Card, Fab, Grid, useMediaQuery } from '@mui/material'
+import { Fab, Grid, useMediaQuery } from '@mui/material'
 import AddIcon from '@mui/icons-material/Add';
 import TableHeader from 'src/components/TableHeader/TableHeader'
+import { fetchData } from 'src/store/apps/contacts'
 
 const ContactsCustomers = () => {
 
@@ -18,7 +18,9 @@ const ContactsCustomers = () => {
 
   // ** Hooks
   const dispatch = useDispatch<AppDispatch>()
-  const store = useSelector((state: RootState) => state.contacts)
+  const store = useSelector((state: RootState) => state)
+
+  console.log('store', store)
   
   useEffect(() => {
     dispatch(

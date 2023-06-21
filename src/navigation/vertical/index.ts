@@ -14,6 +14,10 @@ const navigation = (): VerticalNavItemsType => {
       icon: 'mdi:home-outline',
     },
     {
+      title: 'Plans',
+      path: '/plans'
+    },
+    {
       title: 'Contacts',
       icon: 'mdi:email-outline',
       children: [
